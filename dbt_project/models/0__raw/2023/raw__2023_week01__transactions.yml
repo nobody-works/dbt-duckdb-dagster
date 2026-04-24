@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: raw__2023_week01__transactions
+    description: "Preppin' Data 2023 Week 1のCSVをGoogle Driveから取得した生データ"
+    columns:
+      - name: Transaction Code
+        description: "取引コード（先頭が銀行識別子）"
+      - name: Transaction Date
+        description: "取引日"
+      - name: Online or In-person
+        description: "取引チャネル（1: Online, 2: In-Person）"
+      - name: Customer Code
+        description: "顧客識別コード"
+      - name: Value
+        description: "取引金額"

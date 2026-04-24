@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week24__whatsapp_messages
+    description: "Preppin' Data 2019 Week 24 の入力データ（WhatsApp Messages.csv）"

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week26__cocktail_ingredients
+    description: "Preppin' Data 2019 Week 26 の入力データ（Cocktail Ingredients.csv）"

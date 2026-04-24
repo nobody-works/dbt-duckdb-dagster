@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week30__swim_club_tweets
+    description: "Preppin' Data 2019 Week 30 の入力データ（Swim Club Tweets.csv）"

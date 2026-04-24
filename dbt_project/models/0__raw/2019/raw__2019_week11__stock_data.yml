@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week11__stock_data
+    description: "Preppin' Data 2019 Week 11 の入力データ（Stock Data.csv）"

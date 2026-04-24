@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week04__nba_schedule
+    description: "Preppin' Data 2019 Week 4 の入力データ（NBA Schedule.csv）"

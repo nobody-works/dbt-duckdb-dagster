@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week13__credit_balances
+    description: "Preppin' Data 2019 Week 13 の入力データ（Credit Balances.csv）"

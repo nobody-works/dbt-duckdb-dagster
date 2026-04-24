@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week32__customer_purchases
+    description: "Preppin' Data 2019 Week 32 の入力データ（Customer Purchases.csv）"

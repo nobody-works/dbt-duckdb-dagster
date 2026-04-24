@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg__2023_week01__transactions
+    description: "取引データの整形・変換。銀行コードの抽出、取引種別の正規化、日付を曜日に変換する。"
+    columns:
+      - name: Transaction Code
+        description: "元の取引コード"
+      - name: bank
+        description: "取引コードの先頭アルファベット部分（銀行識別子）"
+        tests:
+          - not_null
+      - name: transaction_type
+        description: "取引種別（Online / In-Person）"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Online", "In-Person"]
+      - name: day_of_week
+        description: "取引日の曜日名（例: Monday）"
+        tests:
+          - not_null
+      - name: customer_code
+        description: "顧客識別コード"
+        tests:
+          - not_null
+      - name: value
+        description: "取引金額"
+        tests:
+          - not_null

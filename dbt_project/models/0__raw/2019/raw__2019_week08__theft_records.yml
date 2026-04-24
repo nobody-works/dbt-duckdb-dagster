@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week08__theft_records
+    description: "Preppin' Data 2019 Week 8 の入力データ（Theft Records.csv）"

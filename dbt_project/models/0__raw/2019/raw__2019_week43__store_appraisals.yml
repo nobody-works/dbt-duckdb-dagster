@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week43__store_appraisals
+    description: "Preppin' Data 2019 Week 43 の入力データ（Store Appraisals.csv）"

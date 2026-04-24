@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week27__store_sales
+    description: "Preppin' Data 2019 Week 27 の入力データ（Store Sales.csv）"

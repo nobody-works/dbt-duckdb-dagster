@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week07__shipping_data
+    description: "Preppin' Data 2019 Week 7 の入力データ（Shipping Data.csv）"

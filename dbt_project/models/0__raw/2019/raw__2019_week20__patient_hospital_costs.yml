@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week20__patient_hospital_costs
+    description: "Preppin' Data 2019 Week 20 の入力データ（Patient Hospital Costs.csv）"

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week44__staff_sales
+    description: "Preppin' Data 2019 Week 44 の入力データ（Staff Sales.csv）"

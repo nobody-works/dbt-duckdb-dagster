@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week10__mailing_list
+    description: "Preppin' Data 2019 Week 10 の入力データ（Mailing List.csv）"

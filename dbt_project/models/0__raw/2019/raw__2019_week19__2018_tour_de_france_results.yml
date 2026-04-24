@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week19__2018_tour_de_france_results
+    description: "Preppin' Data 2019 Week 19 の入力データ（2018 Tour de France Results.csv）"

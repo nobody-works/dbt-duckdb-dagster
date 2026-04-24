@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week18__anime_data
+    description: "Preppin' Data 2019 Week 18 の入力データ（Anime Data.csv）"

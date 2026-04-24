@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week42__store_expansion
+    description: "Preppin' Data 2019 Week 42 の入力データ（Store Expansion.csv）"

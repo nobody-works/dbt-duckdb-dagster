@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week15__broker_purchases
+    description: "Preppin' Data 2019 Week 15 の入力データ（Broker Purchases.csv）"

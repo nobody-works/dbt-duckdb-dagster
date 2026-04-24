@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week34__delivery_schedule
+    description: "Preppin' Data 2019 Week 34 の入力データ（Delivery Schedule.csv）"

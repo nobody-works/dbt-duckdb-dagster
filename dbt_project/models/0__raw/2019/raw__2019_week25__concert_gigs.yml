@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week25__concert_gigs
+    description: "Preppin' Data 2019 Week 25 の入力データ（Concert Gigs.csv）"

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week09__twitter_complaints
+    description: "Preppin' Data 2019 Week 9 の入力データ（Twitter Complaints.csv）"

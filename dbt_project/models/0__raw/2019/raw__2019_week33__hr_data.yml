@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week33__hr_data
+    description: "Preppin' Data 2019 Week 33 の入力データ（HR Data.csv）"

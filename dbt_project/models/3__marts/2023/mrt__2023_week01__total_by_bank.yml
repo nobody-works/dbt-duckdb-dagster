@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: mrt__2023_week01__total_by_bank
+    description: "銀行ごとの合計取引金額（3行）"
+    columns:
+      - name: bank
+        description: "銀行識別子"
+        tests:
+          - not_null
+          - unique
+      - name: total_value
+        description: "合計取引金額"
+        tests:
+          - not_null

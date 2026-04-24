@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week22__daily_sales
+    description: "Preppin' Data 2019 Week 22 の入力データ（Daily Sales.csv）"

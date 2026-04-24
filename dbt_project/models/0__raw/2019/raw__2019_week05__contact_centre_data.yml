@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week05__contact_centre_data
+    description: "Preppin' Data 2019 Week 5 の入力データ（Contact Centre Data.csv）"

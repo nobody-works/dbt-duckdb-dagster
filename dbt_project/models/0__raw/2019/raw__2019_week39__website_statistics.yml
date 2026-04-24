@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week39__website_statistics
+    description: "Preppin' Data 2019 Week 39 の入力データ（Website Statistics.csv）"

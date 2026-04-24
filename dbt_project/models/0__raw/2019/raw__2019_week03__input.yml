@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week03__input
+    description: "Preppin' Data 2019 Week 3 の入力データ（Input.csv）"

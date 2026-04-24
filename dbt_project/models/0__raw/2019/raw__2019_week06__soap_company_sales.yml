@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week06__soap_company_sales
+    description: "Preppin' Data 2019 Week 6 の入力データ（Soap Company Sales.csv）"

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week12__system_downtime
+    description: "Preppin' Data 2019 Week 12 の入力データ（System Downtime.csv）"

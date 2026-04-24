@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week37__sales_files
+    description: "Preppin' Data 2019 Week 37 の入力データ（Sales Files.csv）"

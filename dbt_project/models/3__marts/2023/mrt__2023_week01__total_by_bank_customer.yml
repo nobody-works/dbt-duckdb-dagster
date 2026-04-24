@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: mrt__2023_week01__total_by_bank_customer
+    description: "銀行・顧客コードごとの合計取引金額（33行）"
+    columns:
+      - name: bank
+        description: "銀行識別子"
+        tests:
+          - not_null
+      - name: customer_code
+        description: "顧客識別コード"
+        tests:
+          - not_null
+      - name: total_value
+        description: "合計取引金額"
+        tests:
+          - not_null

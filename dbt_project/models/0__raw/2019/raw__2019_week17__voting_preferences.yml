@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week17__voting_preferences
+    description: "Preppin' Data 2019 Week 17 の入力データ（Voting Preferences.csv）"

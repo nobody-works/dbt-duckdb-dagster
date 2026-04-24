@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week40__survey_data
+    description: "Preppin' Data 2019 Week 40 の入力データ（Survey Data.csv）"

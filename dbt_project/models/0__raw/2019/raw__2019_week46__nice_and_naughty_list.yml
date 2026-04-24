@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week46__nice_and_naughty_list
+    description: "Preppin' Data 2019 Week 46 の入力データ（Nice and Naughty List.csv）"

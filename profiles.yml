@@ -1,0 +1,7 @@
+dbt_dagster:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../data/preppin.duckdb"
+      threads: 4

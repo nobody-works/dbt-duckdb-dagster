@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week14__cafe_transactions
+    description: "Preppin' Data 2019 Week 14 の入力データ（Cafe Transactions.csv）"

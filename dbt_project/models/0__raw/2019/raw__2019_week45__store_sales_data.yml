@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week45__store_sales_data
+    description: "Preppin' Data 2019 Week 45 の入力データ（Store Sales Data.csv）"

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week36__basketball_measurements
+    description: "Preppin' Data 2019 Week 36 の入力データ（Basketball Measurements.csv）"

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week01__input
+    description: "Preppin' Data 2019 Week 1 の入力データ（Input.csv）"

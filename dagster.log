@@ -1,0 +1,2018 @@
+/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/click/core.py:824: SupersessionWarning: Function `dev_command` is superseded and its usage is discouraged. Use 'dg dev' instead.
+  return callback(*args, **kwargs)
+[32m2026-04-22 23:58:46 +0900[0m - dagster - [34mINFO[0m - Using temporary directory /Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.tmp_dagster_home_fcxhh0wa for storage. This will be removed when dagster dev exits.
+[32m2026-04-22 23:58:46 +0900[0m - dagster - [34mINFO[0m - To persist information across sessions, set the environment variable DAGSTER_HOME to a directory to use.
+[32m2026-04-22 23:58:46 +0900[0m - dagster - [34mINFO[0m - Launching Dagster services...
+[32m2026-04-22 23:58:50 +0900[0m - dagster.daemon - [34mINFO[0m - Instance is configured with the following daemons: ['AssetDaemon', 'BackfillDaemon', 'FreshnessDaemon', 'QueuedRunCoordinatorDaemon', 'SchedulerDaemon', 'SensorDaemon']
+[32m2026-04-22 23:58:50 +0900[0m - dagster-webserver - [34mINFO[0m - Serving dagster-webserver on http://127.0.0.1:3000 in process 81069
+I0423 00:52:06.703810 4364937 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I0423 00:52:06.707238 4555110 ev_poll_posix.cc:593] FD from fork parent still in poll list: fd(10, generation: 1)
+I0423 00:52:06.707304 4555110 ev_poll_posix.cc:593] FD from fork parent still in poll list: fd(5, generation: 1)
+[32m2026-04-23 00:52:10 +0900[0m - dagster-webserver - [34mINFO[0m - Received LocationStateChangeEventType.LOCATION_UPDATED event for location dagster_project, refreshing
+[32m2026-04-23 00:53:23 +0900[0m - dagster.daemon.QueuedRunCoordinatorDaemon - [34mINFO[0m - Priority sorting and checking tag concurrency limits for queued runs.
+I0423 00:53:24.021860 4560325 ev_poll_posix.cc:593] FD from fork parent still in poll list: fd(12, generation: 1)
+I0423 00:53:24.021919 4560325 ev_poll_posix.cc:593] FD from fork parent still in poll list: fd(7, generation: 1)
+[32m2026-04-23 00:53:24 +0900[0m - dagster.daemon.QueuedRunCoordinatorDaemon - [34mINFO[0m - Launched 1 runs.
+2026-04-23 00:53:27 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85051 - RUN_START - Started execution of run for "dbt_2023_job".
+2026-04-23 00:53:27 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85051 - ENGINE_EVENT - Executing steps using multiprocess executor: parent process (pid: 85051)
+2026-04-23 00:53:27 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85051 - dbt_2023_assets - STEP_WORKER_STARTING - Launching subprocess for "dbt_2023_assets".
+2026-04-23 00:53:28 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_WORKER_STARTED - Executing step "dbt_2023_assets" in subprocess.
+2026-04-23 00:53:30 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - RESOURCE_INIT_STARTED - Starting initialization of resources [dbt, io_manager].
+2026-04-23 00:53:30 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - RESOURCE_INIT_SUCCESS - Finished initialization of resources [dbt, io_manager].
+2026-04-23 00:53:30 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - LOGS_CAPTURED - Started capturing logs in process (pid: 85058).
+2026-04-23 00:53:30 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_START - Started execution of step "dbt_2023_assets".
+2026-04-23 00:53:30 +0900 - dagster - INFO - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - dbt_2023_assets - A dbt subsetted execution is not being performed. Using the default dbt selection arguments `['--select', 'tag:2023']`.
+2026-04-23 00:53:31 +0900 - dagster - INFO - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - dbt_2023_assets - Copying `/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/dbt_project/target/partial_parse.msgpack` to `/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/dbt_project/target/dbt_2023_assets-345b22e-98404b8/partial_parse.msgpack` to take advantage of partial parsing.
+2026-04-23 00:53:31 +0900 - dagster - INFO - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - dbt_2023_assets - Running dbt command: `dbt build --select tag:2023`.
+Running with dbt=1.11.8
+Registered adapter: duckdb=1.10.1
+[[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_dagster.1__staging.2019
+- models.dbt_dagster.2__intermediate
+- models.dbt_dagster.3__marts.2019
+Found 51 models, 16 data tests, 476 macros
+
+Concurrency: 4 threads (target='dev')
+
+1 of 21 START python table model 2019.raw__2023_week01__transactions ........... [RUN]
+1 of 21 OK created python table model 2019.raw__2023_week01__transactions ...... [[32mOK[0m in 3.72s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2019__raw__2023_week01__transactions" of type "Nothing". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2023_week01__transactions.
+2 of 21 START sql view model 2023.stg__2023_week01__transactions ............... [RUN]
+2 of 21 OK created sql view model 2023.stg__2023_week01__transactions .......... [[32mOK[0m in 0.02s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions" of type "Nothing". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_MATERIALIZATION - Materialized value 2023 stg__2023_week01__transactions.
+6 of 21 START test not_null_stg__2023_week01__transactions_day_of_week ......... [RUN]
+4 of 21 START test not_null_stg__2023_week01__transactions_bank ................ [RUN]
+3 of 21 START test accepted_values_stg__2023_week01__transactions_transaction_type__Online__In_Person  [RUN]
+5 of 21 START test not_null_stg__2023_week01__transactions_customer_code ....... [RUN]
+6 of 21 PASS not_null_stg__2023_week01__transactions_day_of_week ............... [[32mPASS[0m in 0.04s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions_not_null_stg__2023_week01__transactions_day_of_week" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_stg__2023_week01__transactions_day_of_week' on '2023/stg__2023_week01__transactions' passed.
+3 of 21 PASS accepted_values_stg__2023_week01__transactions_transaction_type__Online__In_Person  [[32mPASS[0m in 0.04s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions_accepted_values_stg__2023_week01__transactions_transaction_type__Online__In_Person" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'accepted_values_stg__2023_week01__transactions_transaction_type__Online__In_Person' on '2023/stg__2023_week01__transactions' passed.
+4 of 21 PASS not_null_stg__2023_week01__transactions_bank ...................... [[32mPASS[0m in 0.04s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions_not_null_stg__2023_week01__transactions_bank" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_stg__2023_week01__transactions_bank' on '2023/stg__2023_week01__transactions' passed.
+5 of 21 PASS not_null_stg__2023_week01__transactions_customer_code ............. [[32mPASS[0m in 0.04s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions_not_null_stg__2023_week01__transactions_customer_code" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_stg__2023_week01__transactions_customer_code' on '2023/stg__2023_week01__transactions' passed.
+7 of 21 START test not_null_stg__2023_week01__transactions_transaction_type .... [RUN]
+8 of 21 START test not_null_stg__2023_week01__transactions_value ............... [RUN]
+8 of 21 PASS not_null_stg__2023_week01__transactions_value ..................... [[32mPASS[0m in 0.01s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions_not_null_stg__2023_week01__transactions_value" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_stg__2023_week01__transactions_value' on '2023/stg__2023_week01__transactions' passed.
+7 of 21 PASS not_null_stg__2023_week01__transactions_transaction_type .......... [[32mPASS[0m in 0.01s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__stg__2023_week01__transactions_not_null_stg__2023_week01__transactions_transaction_type" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_stg__2023_week01__transactions_transaction_type' on '2023/stg__2023_week01__transactions' passed.
+11 of 21 START sql table model 2023.mrt__2023_week01__total_by_bank_day_type ... [RUN]
+10 of 21 START sql table model 2023.mrt__2023_week01__total_by_bank_customer ... [RUN]
+9 of 21 START sql table model 2023.mrt__2023_week01__total_by_bank ............. [RUN]
+9 of 21 OK created sql table model 2023.mrt__2023_week01__total_by_bank ........ [[32mOK[0m in 0.04s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank" of type "Nothing". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_MATERIALIZATION - Materialized value 2023 mrt__2023_week01__total_by_bank.
+11 of 21 OK created sql table model 2023.mrt__2023_week01__total_by_bank_day_type  [[32mOK[0m in 0.04s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_day_type" of type "Nothing". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_MATERIALIZATION - Materialized value 2023 mrt__2023_week01__total_by_bank_day_type.
+13 of 21 START test not_null_mrt__2023_week01__total_by_bank_total_value ....... [RUN]
+10 of 21 OK created sql table model 2023.mrt__2023_week01__total_by_bank_customer  [[32mOK[0m in 0.05s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_customer" of type "Nothing". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_MATERIALIZATION - Materialized value 2023 mrt__2023_week01__total_by_bank_customer.
+12 of 21 START test not_null_mrt__2023_week01__total_by_bank_bank .............. [RUN]
+14 of 21 START test unique_mrt__2023_week01__total_by_bank_bank ................ [RUN]
+15 of 21 START test not_null_mrt__2023_week01__total_by_bank_day_type_bank ..... [RUN]
+12 of 21 PASS not_null_mrt__2023_week01__total_by_bank_bank .................... [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_not_null_mrt__2023_week01__total_by_bank_bank" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_bank' on '2023/mrt__2023_week01__total_by_bank' passed.
+14 of 21 PASS unique_mrt__2023_week01__total_by_bank_bank ...................... [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_unique_mrt__2023_week01__total_by_bank_bank" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'unique_mrt__2023_week01__total_by_bank_bank' on '2023/mrt__2023_week01__total_by_bank' passed.
+15 of 21 PASS not_null_mrt__2023_week01__total_by_bank_day_type_bank ........... [[32mPASS[0m in 0.02s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_day_type_not_null_mrt__2023_week01__total_by_bank_day_type_bank" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_day_type_bank' on '2023/mrt__2023_week01__total_by_bank_day_type' passed.
+13 of 21 PASS not_null_mrt__2023_week01__total_by_bank_total_value ............. [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_not_null_mrt__2023_week01__total_by_bank_total_value" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_total_value' on '2023/mrt__2023_week01__total_by_bank' passed.
+16 of 21 START test not_null_mrt__2023_week01__total_by_bank_day_type_day_of_week  [RUN]
+17 of 21 START test not_null_mrt__2023_week01__total_by_bank_day_type_total_value  [RUN]
+18 of 21 START test not_null_mrt__2023_week01__total_by_bank_day_type_transaction_type  [RUN]
+19 of 21 START test not_null_mrt__2023_week01__total_by_bank_customer_bank ..... [RUN]
+16 of 21 PASS not_null_mrt__2023_week01__total_by_bank_day_type_day_of_week .... [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_day_type_not_null_mrt__2023_week01__total_by_bank_day_type_day_of_week" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_day_type_day_of_week' on '2023/mrt__2023_week01__total_by_bank_day_type' passed.
+17 of 21 PASS not_null_mrt__2023_week01__total_by_bank_day_type_total_value .... [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_day_type_not_null_mrt__2023_week01__total_by_bank_day_type_total_value" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_day_type_total_value' on '2023/mrt__2023_week01__total_by_bank_day_type' passed.
+18 of 21 PASS not_null_mrt__2023_week01__total_by_bank_day_type_transaction_type  [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_day_type_not_null_mrt__2023_week01__total_by_bank_day_type_transaction_type" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_day_type_transaction_type' on '2023/mrt__2023_week01__total_by_bank_day_type' passed.
+19 of 21 PASS not_null_mrt__2023_week01__total_by_bank_customer_bank ........... [[32mPASS[0m in 0.03s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_customer_not_null_mrt__2023_week01__total_by_bank_customer_bank" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_customer_bank' on '2023/mrt__2023_week01__total_by_bank_customer' passed.
+20 of 21 START test not_null_mrt__2023_week01__total_by_bank_customer_customer_code  [RUN]
+21 of 21 START test not_null_mrt__2023_week01__total_by_bank_customer_total_value  [RUN]
+20 of 21 PASS not_null_mrt__2023_week01__total_by_bank_customer_customer_code .. [[32mPASS[0m in 0.01s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_customer_not_null_mrt__2023_week01__total_by_bank_customer_customer_code" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_customer_customer_code' on '2023/mrt__2023_week01__total_by_bank_customer' passed.
+21 of 21 PASS not_null_mrt__2023_week01__total_by_bank_customer_total_value .... [[32mPASS[0m in 0.01s]
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_OUTPUT - Yielded output "2023__mrt__2023_week01__total_by_bank_customer_not_null_mrt__2023_week01__total_by_bank_customer_total_value" of type "Any". (Type check passed).
+2026-04-23 00:53:36 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - ASSET_CHECK_EVALUATION - Asset check 'not_null_mrt__2023_week01__total_by_bank_customer_total_value' on '2023/mrt__2023_week01__total_by_bank_customer' passed.
+
+Finished running 4 table models, 16 data tests, 1 view model in 0 hours 0 minutes and 4.00 seconds (4.00s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=21 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=21
+2026-04-23 00:53:37 +0900 - dagster - INFO - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - dbt_2023_assets - Finished dbt command: `dbt build --select tag:2023`.
+2026-04-23 00:53:37 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85058 - dbt_2023_assets - STEP_SUCCESS - Finished execution of step "dbt_2023_assets" in 6.11s.
+2026-04-23 00:53:37 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85051 - ENGINE_EVENT - Multiprocess executor: parent process exiting after 9.72s (pid: 85051)
+2026-04-23 00:53:37 +0900 - dagster - DEBUG - dbt_2023_job - 345b22e1-62ce-4514-80ed-e449681658b0 - 85051 - RUN_SUCCESS - Finished execution of run for "dbt_2023_job".
+[32m2026-04-23 00:54:24 +0900[0m - dagster.daemon.QueuedRunCoordinatorDaemon - [34mINFO[0m - Priority sorting and checking tag concurrency limits for queued runs.
+I0423 00:54:24.681729 4555425 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I0423 00:54:24.685110 4564149 ev_poll_posix.cc:593] FD from fork parent still in poll list: fd(3, generation: 1)
+I0423 00:54:24.685159 4564149 ev_poll_posix.cc:593] FD from fork parent still in poll list: fd(7, generation: 1)
+[32m2026-04-23 00:54:25 +0900[0m - dagster.daemon.QueuedRunCoordinatorDaemon - [34mINFO[0m - Launched 1 runs.
+2026-04-23 00:54:28 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85109 - RUN_START - Started execution of run for "dbt_2019_job".
+2026-04-23 00:54:28 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85109 - ENGINE_EVENT - Executing steps using multiprocess executor: parent process (pid: 85109)
+2026-04-23 00:54:28 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85109 - dbt_2019_assets - STEP_WORKER_STARTING - Launching subprocess for "dbt_2019_assets".
+2026-04-23 00:54:28 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_WORKER_STARTED - Executing step "dbt_2019_assets" in subprocess.
+2026-04-23 00:54:31 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - RESOURCE_INIT_STARTED - Starting initialization of resources [dbt, io_manager].
+2026-04-23 00:54:31 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - RESOURCE_INIT_SUCCESS - Finished initialization of resources [dbt, io_manager].
+2026-04-23 00:54:31 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - LOGS_CAPTURED - Started capturing logs in process (pid: 85117).
+2026-04-23 00:54:31 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_START - Started execution of step "dbt_2019_assets".
+2026-04-23 00:54:31 +0900 - dagster - INFO - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - dbt_2019_assets - A dbt subsetted execution is not being performed. Using the default dbt selection arguments `['--select', 'tag:2019']`.
+2026-04-23 00:54:32 +0900 - dagster - INFO - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - dbt_2019_assets - Copying `/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/dbt_project/target/partial_parse.msgpack` to `/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/dbt_project/target/dbt_2019_assets-42d5e8c-c1c0eaf/partial_parse.msgpack` to take advantage of partial parsing.
+2026-04-23 00:54:32 +0900 - dagster - INFO - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - dbt_2019_assets - Running dbt command: `dbt build --select tag:2019`.
+Running with dbt=1.11.8
+Registered adapter: duckdb=1.10.1
+[[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_dagster.1__staging.2019
+- models.dbt_dagster.3__marts.2019
+- models.dbt_dagster.2__intermediate
+Found 51 models, 16 data tests, 476 macros
+
+Concurrency: 4 threads (target='dev')
+
+1 of 46 START python table model 2019.raw__2019_week01__input .................. [RUN]
+3 of 46 START python table model 2019.raw__2019_week03__input .................. [RUN]
+4 of 46 START python table model 2019.raw__2019_week04__nba_schedule ........... [RUN]
+2 of 46 START python table model 2019.raw__2019_week02__input .................. [RUN]
+1 of 46 ERROR creating python table model 2019.raw__2019_week01__input ......... [[31mERROR[0m in 1.81s]
+5 of 46 START python table model 2019.raw__2019_week05__contact_centre_data .... [RUN]
+5 of 46 ERROR creating python table model 2019.raw__2019_week05__contact_centre_data  [[31mERROR[0m in 2.55s]
+6 of 46 START python table model 2019.raw__2019_week06__soap_company_sales ..... [RUN]
+2 of 46 ERROR creating python table model 2019.raw__2019_week02__input ......... [[31mERROR[0m in 4.55s]
+7 of 46 START python table model 2019.raw__2019_week07__shipping_data .......... [RUN]
+3 of 46 ERROR creating python table model 2019.raw__2019_week03__input ......... [[31mERROR[0m in 4.61s]
+8 of 46 START python table model 2019.raw__2019_week08__theft_records .......... [RUN]
+4 of 46 ERROR creating python table model 2019.raw__2019_week04__nba_schedule .. [[31mERROR[0m in 4.75s]
+9 of 46 START python table model 2019.raw__2019_week09__twitter_complaints ..... [RUN]
+7 of 46 ERROR creating python table model 2019.raw__2019_week07__shipping_data . [[31mERROR[0m in 0.64s]
+10 of 46 START python table model 2019.raw__2019_week10__mailing_list .......... [RUN]
+6 of 46 ERROR creating python table model 2019.raw__2019_week06__soap_company_sales  [[31mERROR[0m in 1.31s]
+11 of 46 START python table model 2019.raw__2019_week11__stock_data ............ [RUN]
+8 of 46 ERROR creating python table model 2019.raw__2019_week08__theft_records . [[31mERROR[0m in 3.03s]
+12 of 46 START python table model 2019.raw__2019_week12__system_downtime ....... [RUN]
+9 of 46 ERROR creating python table model 2019.raw__2019_week09__twitter_complaints  [[31mERROR[0m in 4.03s]
+13 of 46 START python table model 2019.raw__2019_week13__credit_balances ....... [RUN]
+10 of 46 ERROR creating python table model 2019.raw__2019_week10__mailing_list . [[31mERROR[0m in 4.18s]
+14 of 46 START python table model 2019.raw__2019_week14__cafe_transactions ..... [RUN]
+11 of 46 OK created python table model 2019.raw__2019_week11__stock_data ....... [[32mOK[0m in 4.02s]
+2026-04-23 00:54:43 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_OUTPUT - Yielded output "2019__raw__2019_week11__stock_data" of type "Nothing". (Type check passed).
+2026-04-23 00:54:43 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2019_week11__stock_data.
+15 of 46 START python table model 2019.raw__2019_week15__broker_purchases ...... [RUN]
+12 of 46 ERROR creating python table model 2019.raw__2019_week12__system_downtime  [[31mERROR[0m in 3.00s]
+16 of 46 START python table model 2019.raw__2019_week16__sales_data ............ [RUN]
+15 of 46 ERROR creating python table model 2019.raw__2019_week15__broker_purchases  [[31mERROR[0m in 1.33s]
+17 of 46 START python table model 2019.raw__2019_week17__voting_preferences .... [RUN]
+16 of 46 ERROR creating python table model 2019.raw__2019_week16__sales_data ... [[31mERROR[0m in 1.51s]
+18 of 46 START python table model 2019.raw__2019_week18__anime_data ............ [RUN]
+13 of 46 ERROR creating python table model 2019.raw__2019_week13__credit_balances  [[31mERROR[0m in 4.06s]
+19 of 46 START python table model 2019.raw__2019_week19__2018_tour_de_france_results  [RUN]
+17 of 46 OK created python table model 2019.raw__2019_week17__voting_preferences  [[32mOK[0m in 1.99s]
+2026-04-23 00:54:46 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_OUTPUT - Yielded output "2019__raw__2019_week17__voting_preferences" of type "Nothing". (Type check passed).
+2026-04-23 00:54:46 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2019_week17__voting_preferences.
+20 of 46 START python table model 2019.raw__2019_week20__patient_hospital_costs  [RUN]
+20 of 46 ERROR creating python table model 2019.raw__2019_week20__patient_hospital_costs  [[31mERROR[0m in 0.69s]
+21 of 46 START python table model 2019.raw__2019_week21__patient_data .......... [RUN]
+14 of 46 ERROR creating python table model 2019.raw__2019_week14__cafe_transactions  [[31mERROR[0m in 5.15s]
+22 of 46 START python table model 2019.raw__2019_week22__daily_sales ........... [RUN]
+21 of 46 OK created python table model 2019.raw__2019_week21__patient_data ..... [[32mOK[0m in 2.16s]
+2026-04-23 00:54:49 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_OUTPUT - Yielded output "2019__raw__2019_week21__patient_data" of type "Nothing". (Type check passed).
+2026-04-23 00:54:49 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2019_week21__patient_data.
+23 of 46 START python table model 2019.raw__2019_week23__sales_from_dave ....... [RUN]
+18 of 46 ERROR creating python table model 2019.raw__2019_week18__anime_data ... [[31mERROR[0m in 3.92s]
+24 of 46 START python table model 2019.raw__2019_week24__whatsapp_messages ..... [RUN]
+24 of 46 ERROR creating python table model 2019.raw__2019_week24__whatsapp_messages  [[31mERROR[0m in 1.43s]
+25 of 46 START python table model 2019.raw__2019_week25__concert_gigs .......... [RUN]
+19 of 46 ERROR creating python table model 2019.raw__2019_week19__2018_tour_de_france_results  [[31mERROR[0m in 4.68s]
+26 of 46 START python table model 2019.raw__2019_week26__cocktail_ingredients .. [RUN]
+22 of 46 OK created python table model 2019.raw__2019_week22__daily_sales ...... [[32mOK[0m in 3.13s]
+2026-04-23 00:54:51 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_OUTPUT - Yielded output "2019__raw__2019_week22__daily_sales" of type "Nothing". (Type check passed).
+2026-04-23 00:54:51 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2019_week22__daily_sales.
+27 of 46 START python table model 2019.raw__2019_week27__store_sales ........... [RUN]
+25 of 46 ERROR creating python table model 2019.raw__2019_week25__concert_gigs . [[31mERROR[0m in 1.19s]
+28 of 46 START python table model 2019.raw__2019_week28__employee_productivity . [RUN]
+23 of 46 ERROR creating python table model 2019.raw__2019_week23__sales_from_dave  [[31mERROR[0m in 2.92s]
+29 of 46 START python table model 2019.raw__2019_week29__subscription_pricing .. [RUN]
+26 of 46 ERROR creating python table model 2019.raw__2019_week26__cocktail_ingredients  [[31mERROR[0m in 3.36s]
+30 of 46 START python table model 2019.raw__2019_week30__swim_club_tweets ...... [RUN]
+27 of 46 ERROR creating python table model 2019.raw__2019_week27__store_sales .. [[31mERROR[0m in 3.59s]
+31 of 46 START python table model 2019.raw__2019_week31__orders_data ........... [RUN]
+28 of 46 ERROR creating python table model 2019.raw__2019_week28__employee_productivity  [[31mERROR[0m in 3.32s]
+32 of 46 START python table model 2019.raw__2019_week32__customer_purchases .... [RUN]
+29 of 46 ERROR creating python table model 2019.raw__2019_week29__subscription_pricing  [[31mERROR[0m in 4.01s]
+33 of 46 START python table model 2019.raw__2019_week33__hr_data ............... [RUN]
+31 of 46 ERROR creating python table model 2019.raw__2019_week31__orders_data .. [[31mERROR[0m in 4.72s]
+34 of 46 START python table model 2019.raw__2019_week34__delivery_schedule ..... [RUN]
+32 of 46 ERROR creating python table model 2019.raw__2019_week32__customer_purchases  [[31mERROR[0m in 4.07s]
+35 of 46 START python table model 2019.raw__2019_week35__store_orders .......... [RUN]
+30 of 46 ERROR creating python table model 2019.raw__2019_week30__swim_club_tweets  [[31mERROR[0m in 5.22s]
+36 of 46 START python table model 2019.raw__2019_week36__basketball_measurements  [RUN]
+33 of 46 ERROR creating python table model 2019.raw__2019_week33__hr_data ...... [[31mERROR[0m in 4.42s]
+37 of 46 START python table model 2019.raw__2019_week37__sales_files ........... [RUN]
+37 of 46 ERROR creating python table model 2019.raw__2019_week37__sales_files .. [[31mERROR[0m in 1.17s]
+38 of 46 START python table model 2019.raw__2019_week38__clinic_data ........... [RUN]
+36 of 46 OK created python table model 2019.raw__2019_week36__basketball_measurements  [[32mOK[0m in 3.08s]
+2026-04-23 00:55:02 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_OUTPUT - Yielded output "2019__raw__2019_week36__basketball_measurements" of type "Nothing". (Type check passed).
+2026-04-23 00:55:02 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2019_week36__basketball_measurements.
+39 of 46 START python table model 2019.raw__2019_week39__website_statistics .... [RUN]
+34 of 46 ERROR creating python table model 2019.raw__2019_week34__delivery_schedule  [[31mERROR[0m in 3.63s]
+40 of 46 START python table model 2019.raw__2019_week40__survey_data ........... [RUN]
+38 of 46 OK created python table model 2019.raw__2019_week38__clinic_data ...... [[32mOK[0m in 2.17s]
+2026-04-23 00:55:03 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_OUTPUT - Yielded output "2019__raw__2019_week38__clinic_data" of type "Nothing". (Type check passed).
+2026-04-23 00:55:03 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - ASSET_MATERIALIZATION - Materialized value 2019 raw__2019_week38__clinic_data.
+41 of 46 START python table model 2019.raw__2019_week41__customer_complaints ... [RUN]
+35 of 46 ERROR creating python table model 2019.raw__2019_week35__store_orders . [[31mERROR[0m in 5.05s]
+42 of 46 START python table model 2019.raw__2019_week42__store_expansion ....... [RUN]
+40 of 46 ERROR creating python table model 2019.raw__2019_week40__survey_data .. [[31mERROR[0m in 1.58s]
+43 of 46 START python table model 2019.raw__2019_week43__store_appraisals ...... [RUN]
+39 of 46 ERROR creating python table model 2019.raw__2019_week39__website_statistics  [[31mERROR[0m in 4.62s]
+44 of 46 START python table model 2019.raw__2019_week44__staff_sales ........... [RUN]
+41 of 46 ERROR creating python table model 2019.raw__2019_week41__customer_complaints  [[31mERROR[0m in 4.04s]
+45 of 46 START python table model 2019.raw__2019_week45__store_sales_data ...... [RUN]
+42 of 46 ERROR creating python table model 2019.raw__2019_week42__store_expansion  [[31mERROR[0m in 4.73s]
+46 of 46 START python table model 2019.raw__2019_week46__nice_and_naughty_list . [RUN]
+45 of 46 ERROR creating python table model 2019.raw__2019_week45__store_sales_data  [[31mERROR[0m in 1.31s]
+43 of 46 ERROR creating python table model 2019.raw__2019_week43__store_appraisals  [[31mERROR[0m in 5.50s]
+46 of 46 ERROR creating python table model 2019.raw__2019_week46__nice_and_naughty_list  [[31mERROR[0m in 1.56s]
+44 of 46 ERROR creating python table model 2019.raw__2019_week44__staff_sales .. [[31mERROR[0m in 4.04s]
+
+Finished running 46 table models in 0 hours 0 minutes and 37.90 seconds (37.90s).
+
+[31mCompleted with 40 errors, 0 partial successes, and 0 warnings:[0m
+
+[31mFailure in model raw__2019_week01__input (models/0__raw/2019/raw__2019_week01__input.py)[0m
+  Runtime Error in model raw__2019_week01__input (models/0__raw/2019/raw__2019_week01__input.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpux78mcgq.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week01__input.py
+
+[31mFailure in model raw__2019_week05__contact_centre_data (models/0__raw/2019/raw__2019_week05__contact_centre_data.py)[0m
+  Runtime Error in model raw__2019_week05__contact_centre_data (models/0__raw/2019/raw__2019_week05__contact_centre_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp5tfha3qm.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week05__contact_centre_data.py
+
+[31mFailure in model raw__2019_week02__input (models/0__raw/2019/raw__2019_week02__input.py)[0m
+  Runtime Error in model raw__2019_week02__input (models/0__raw/2019/raw__2019_week02__input.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpv9o_ish3.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week02__input.py
+
+[31mFailure in model raw__2019_week03__input (models/0__raw/2019/raw__2019_week03__input.py)[0m
+  Runtime Error in model raw__2019_week03__input (models/0__raw/2019/raw__2019_week03__input.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpsxi_kstt.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week03__input.py
+
+[31mFailure in model raw__2019_week04__nba_schedule (models/0__raw/2019/raw__2019_week04__nba_schedule.py)[0m
+  Runtime Error in model raw__2019_week04__nba_schedule (models/0__raw/2019/raw__2019_week04__nba_schedule.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpmeif01kb.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week04__nba_schedule.py
+
+[31mFailure in model raw__2019_week07__shipping_data (models/0__raw/2019/raw__2019_week07__shipping_data.py)[0m
+  Runtime Error in model raw__2019_week07__shipping_data (models/0__raw/2019/raw__2019_week07__shipping_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmplieprbuv.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 404: Not Found
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week07__shipping_data.py
+
+[31mFailure in model raw__2019_week06__soap_company_sales (models/0__raw/2019/raw__2019_week06__soap_company_sales.py)[0m
+  Runtime Error in model raw__2019_week06__soap_company_sales (models/0__raw/2019/raw__2019_week06__soap_company_sales.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp4sg3dnjv.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week06__soap_company_sales.py
+
+[31mFailure in model raw__2019_week08__theft_records (models/0__raw/2019/raw__2019_week08__theft_records.py)[0m
+  Runtime Error in model raw__2019_week08__theft_records (models/0__raw/2019/raw__2019_week08__theft_records.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpyjfbqdm4.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week08__theft_records.py
+
+[31mFailure in model raw__2019_week09__twitter_complaints (models/0__raw/2019/raw__2019_week09__twitter_complaints.py)[0m
+  Runtime Error in model raw__2019_week09__twitter_complaints (models/0__raw/2019/raw__2019_week09__twitter_complaints.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpq8xyogma.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week09__twitter_complaints.py
+
+[31mFailure in model raw__2019_week10__mailing_list (models/0__raw/2019/raw__2019_week10__mailing_list.py)[0m
+  Runtime Error in model raw__2019_week10__mailing_list (models/0__raw/2019/raw__2019_week10__mailing_list.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp4ueqotgw.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week10__mailing_list.py
+
+[31mFailure in model raw__2019_week12__system_downtime (models/0__raw/2019/raw__2019_week12__system_downtime.py)[0m
+  Runtime Error in model raw__2019_week12__system_downtime (models/0__raw/2019/raw__2019_week12__system_downtime.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp2cncvicx.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week12__system_downtime.py
+
+[31mFailure in model raw__2019_week15__broker_purchases (models/0__raw/2019/raw__2019_week15__broker_purchases.py)[0m
+  Runtime Error in model raw__2019_week15__broker_purchases (models/0__raw/2019/raw__2019_week15__broker_purchases.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpiy9gchdy.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week15__broker_purchases.py
+
+[31mFailure in model raw__2019_week16__sales_data (models/0__raw/2019/raw__2019_week16__sales_data.py)[0m
+  Runtime Error in model raw__2019_week16__sales_data (models/0__raw/2019/raw__2019_week16__sales_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpbjpbozn3.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week16__sales_data.py
+
+[31mFailure in model raw__2019_week13__credit_balances (models/0__raw/2019/raw__2019_week13__credit_balances.py)[0m
+  Runtime Error in model raw__2019_week13__credit_balances (models/0__raw/2019/raw__2019_week13__credit_balances.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpazjcpr7s.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week13__credit_balances.py
+
+[31mFailure in model raw__2019_week20__patient_hospital_costs (models/0__raw/2019/raw__2019_week20__patient_hospital_costs.py)[0m
+  Runtime Error in model raw__2019_week20__patient_hospital_costs (models/0__raw/2019/raw__2019_week20__patient_hospital_costs.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp77gq1wyz.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 404: Not Found
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week20__patient_hospital_costs.py
+
+[31mFailure in model raw__2019_week14__cafe_transactions (models/0__raw/2019/raw__2019_week14__cafe_transactions.py)[0m
+  Runtime Error in model raw__2019_week14__cafe_transactions (models/0__raw/2019/raw__2019_week14__cafe_transactions.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpkq7f_7e1.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: could not parse `1.2` as dtype `i64` at column 'Price' (column number 5)
+  
+  The current offset in the file is 18231 bytes.
+  
+  You might want to try:
+  - increasing `infer_schema_length` (e.g. `infer_schema_length=10000`),
+  - specifying correct dtype with the `schema_overrides` argument
+  - setting `ignore_errors` to `True`,
+  - adding `1.2` to the `null_values` list.
+  
+  Original error: ```invalid primitive value found during CSV parsing```
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week14__cafe_transactions.py
+
+[31mFailure in model raw__2019_week18__anime_data (models/0__raw/2019/raw__2019_week18__anime_data.py)[0m
+  Runtime Error in model raw__2019_week18__anime_data (models/0__raw/2019/raw__2019_week18__anime_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp121kqxnu.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week18__anime_data.py
+
+[31mFailure in model raw__2019_week24__whatsapp_messages (models/0__raw/2019/raw__2019_week24__whatsapp_messages.py)[0m
+  Runtime Error in model raw__2019_week24__whatsapp_messages (models/0__raw/2019/raw__2019_week24__whatsapp_messages.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpm1_uev54.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week24__whatsapp_messages.py
+
+[31mFailure in model raw__2019_week19__2018_tour_de_france_results (models/0__raw/2019/raw__2019_week19__2018_tour_de_france_results.py)[0m
+  Runtime Error in model raw__2019_week19__2018_tour_de_france_results (models/0__raw/2019/raw__2019_week19__2018_tour_de_france_results.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpud6awv4b.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week19__2018_tour_de_france_results.py
+
+[31mFailure in model raw__2019_week25__concert_gigs (models/0__raw/2019/raw__2019_week25__concert_gigs.py)[0m
+  Runtime Error in model raw__2019_week25__concert_gigs (models/0__raw/2019/raw__2019_week25__concert_gigs.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp56q0hfqx.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week25__concert_gigs.py
+
+[31mFailure in model raw__2019_week23__sales_from_dave (models/0__raw/2019/raw__2019_week23__sales_from_dave.py)[0m
+  Runtime Error in model raw__2019_week23__sales_from_dave (models/0__raw/2019/raw__2019_week23__sales_from_dave.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp9cztlrvc.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week23__sales_from_dave.py
+
+[31mFailure in model raw__2019_week26__cocktail_ingredients (models/0__raw/2019/raw__2019_week26__cocktail_ingredients.py)[0m
+  Runtime Error in model raw__2019_week26__cocktail_ingredients (models/0__raw/2019/raw__2019_week26__cocktail_ingredients.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpd8n29jko.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week26__cocktail_ingredients.py
+
+[31mFailure in model raw__2019_week27__store_sales (models/0__raw/2019/raw__2019_week27__store_sales.py)[0m
+  Runtime Error in model raw__2019_week27__store_sales (models/0__raw/2019/raw__2019_week27__store_sales.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmph4y2l_wg.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week27__store_sales.py
+
+[31mFailure in model raw__2019_week28__employee_productivity (models/0__raw/2019/raw__2019_week28__employee_productivity.py)[0m
+  Runtime Error in model raw__2019_week28__employee_productivity (models/0__raw/2019/raw__2019_week28__employee_productivity.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpp0ot1mx9.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week28__employee_productivity.py
+
+[31mFailure in model raw__2019_week29__subscription_pricing (models/0__raw/2019/raw__2019_week29__subscription_pricing.py)[0m
+  Runtime Error in model raw__2019_week29__subscription_pricing (models/0__raw/2019/raw__2019_week29__subscription_pricing.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp4c0w9_rq.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week29__subscription_pricing.py
+
+[31mFailure in model raw__2019_week31__orders_data (models/0__raw/2019/raw__2019_week31__orders_data.py)[0m
+  Runtime Error in model raw__2019_week31__orders_data (models/0__raw/2019/raw__2019_week31__orders_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpv7yxg7nd.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week31__orders_data.py
+
+[31mFailure in model raw__2019_week32__customer_purchases (models/0__raw/2019/raw__2019_week32__customer_purchases.py)[0m
+  Runtime Error in model raw__2019_week32__customer_purchases (models/0__raw/2019/raw__2019_week32__customer_purchases.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpf1easeu5.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week32__customer_purchases.py
+
+[31mFailure in model raw__2019_week30__swim_club_tweets (models/0__raw/2019/raw__2019_week30__swim_club_tweets.py)[0m
+  Runtime Error in model raw__2019_week30__swim_club_tweets (models/0__raw/2019/raw__2019_week30__swim_club_tweets.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp17m2_589.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week30__swim_club_tweets.py
+
+[31mFailure in model raw__2019_week33__hr_data (models/0__raw/2019/raw__2019_week33__hr_data.py)[0m
+  Runtime Error in model raw__2019_week33__hr_data (models/0__raw/2019/raw__2019_week33__hr_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpldejfbeo.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week33__hr_data.py
+
+[31mFailure in model raw__2019_week37__sales_files (models/0__raw/2019/raw__2019_week37__sales_files.py)[0m
+  Runtime Error in model raw__2019_week37__sales_files (models/0__raw/2019/raw__2019_week37__sales_files.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmppgzo51oq.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week37__sales_files.py
+
+[31mFailure in model raw__2019_week34__delivery_schedule (models/0__raw/2019/raw__2019_week34__delivery_schedule.py)[0m
+  Runtime Error in model raw__2019_week34__delivery_schedule (models/0__raw/2019/raw__2019_week34__delivery_schedule.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpw40oswgw.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week34__delivery_schedule.py
+
+[31mFailure in model raw__2019_week35__store_orders (models/0__raw/2019/raw__2019_week35__store_orders.py)[0m
+  Runtime Error in model raw__2019_week35__store_orders (models/0__raw/2019/raw__2019_week35__store_orders.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpalrk_n_y.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week35__store_orders.py
+
+[31mFailure in model raw__2019_week40__survey_data (models/0__raw/2019/raw__2019_week40__survey_data.py)[0m
+  Runtime Error in model raw__2019_week40__survey_data (models/0__raw/2019/raw__2019_week40__survey_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpn2yjo1hh.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week40__survey_data.py
+
+[31mFailure in model raw__2019_week39__website_statistics (models/0__raw/2019/raw__2019_week39__website_statistics.py)[0m
+  Runtime Error in model raw__2019_week39__website_statistics (models/0__raw/2019/raw__2019_week39__website_statistics.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp7p4o5whf.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week39__website_statistics.py
+
+[31mFailure in model raw__2019_week41__customer_complaints (models/0__raw/2019/raw__2019_week41__customer_complaints.py)[0m
+  Runtime Error in model raw__2019_week41__customer_complaints (models/0__raw/2019/raw__2019_week41__customer_complaints.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpkp1_9cu5.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week41__customer_complaints.py
+
+[31mFailure in model raw__2019_week42__store_expansion (models/0__raw/2019/raw__2019_week42__store_expansion.py)[0m
+  Runtime Error in model raw__2019_week42__store_expansion (models/0__raw/2019/raw__2019_week42__store_expansion.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpucywou7v.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week42__store_expansion.py
+
+[31mFailure in model raw__2019_week45__store_sales_data (models/0__raw/2019/raw__2019_week45__store_sales_data.py)[0m
+  Runtime Error in model raw__2019_week45__store_sales_data (models/0__raw/2019/raw__2019_week45__store_sales_data.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp8ynyj8dt.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week45__store_sales_data.py
+
+[31mFailure in model raw__2019_week43__store_appraisals (models/0__raw/2019/raw__2019_week43__store_appraisals.py)[0m
+  Runtime Error in model raw__2019_week43__store_appraisals (models/0__raw/2019/raw__2019_week43__store_appraisals.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpzxnm2df2.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week43__store_appraisals.py
+
+[31mFailure in model raw__2019_week46__nice_and_naughty_list (models/0__raw/2019/raw__2019_week46__nice_and_naughty_list.py)[0m
+  Runtime Error in model raw__2019_week46__nice_and_naughty_list (models/0__raw/2019/raw__2019_week46__nice_and_naughty_list.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpzu05lwkr.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 720, in http_error_302
+      return self.parent.open(new, timeout=req.timeout)
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 533, in error
+      return self._call_chain(*args)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 613, in http_error_default
+      raise HTTPError(req.full_url, code, msg, hdrs, fp)
+  urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week46__nice_and_naughty_list.py
+
+[31mFailure in model raw__2019_week44__staff_sales (models/0__raw/2019/raw__2019_week44__staff_sales.py)[0m
+  Runtime Error in model raw__2019_week44__staff_sales (models/0__raw/2019/raw__2019_week44__staff_sales.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmp0goodgga.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 565, in read_csv
+      df = _read_csv_impl(
+          data,
+      ...<27 lines>...
+          glob=glob,
+      )
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 717, in _read_csv_impl
+      pydf = PyDataFrame.read_csv(
+          source,
+      ...<28 lines>...
+          schema=schema,
+      )
+  polars.exceptions.ComputeError: invalid utf-8 sequence
+  
+
+  compiled code at target/dbt_2019_assets-42d5e8c-c1c0eaf/compiled/dbt_dagster/models/0__raw/2019/raw__2019_week44__staff_sales.py
+
+Done. PASS=6 WARN=0 ERROR=40 SKIP=0 NO-OP=0 TOTAL=46
+2026-04-23 00:55:11 +0900 - dagster - INFO - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - dbt_2019_assets - Finished dbt command: `dbt build --select tag:2019`.
+2026-04-23 00:55:11 +0900 - dagster - ERROR - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85117 - dbt_2019_assets - STEP_FAILURE - Execution of step "dbt_2019_assets" failed.
+
+dagster_dbt.errors.DagsterDbtCliRuntimeError: The dbt CLI process with command
+
+`dbt build --select tag:2019`
+
+failed with exit code `1`. Check the stdout in the Dagster compute logs for the full information about the error, or view the dbt debug log: /Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/dbt_project/target/dbt_2019_assets-42d5e8c-c1c0eaf/dbt.log.
+
+Errors parsed from dbt logs:
+
+1 of 46 ERROR creating python table model 2019.raw__2019_week01__input ......... [[31mERROR[0m in 1.81s]
+
+5 of 46 ERROR creating python table model 2019.raw__2019_week05__contact_centre_data  [[31mERROR[0m in 2.55s]
+
+2 of 46 ERROR creating python table model 2019.raw__2019_week02__input ......... [[31mERROR[0m in 4.55s]
+
+3 of 46 ERROR creating python table model 2019.raw__2019_week03__input ......... [[31mERROR[0m in 4.61s]
+
+4 of 46 ERROR creating python table model 2019.raw__2019_week04__nba_schedule .. [[31mERROR[0m in 4.75s]
+
+7 of 46 ERROR creating python table model 2019.raw__2019_week07__shipping_data . [[31mERROR[0m in 0.64s]
+
+6 of 46 ERROR creating python table model 2019.raw__2019_week06__soap_company_sales  [[31mERROR[0m in 1.31s]
+
+8 of 46 ERROR creating python table model 2019.raw__2019_week08__theft_records . [[31mERROR[0m in 3.03s]
+
+9 of 46 ERROR creating python table model 2019.raw__2019_week09__twitter_complaints  [[31mERROR[0m in 4.03s]
+
+10 of 46 ERROR creating python table model 2019.raw__2019_week10__mailing_list . [[31mERROR[0m in 4.18s]
+
+12 of 46 ERROR creating python table model 2019.raw__2019_week12__system_downtime  [[31mERROR[0m in 3.00s]
+
+15 of 46 ERROR creating python table model 2019.raw__2019_week15__broker_purchases  [[31mERROR[0m in 1.33s]
+
+16 of 46 ERROR creating python table model 2019.raw__2019_week16__sales_data ... [[31mERROR[0m in 1.51s]
+
+13 of 46 ERROR creating python table model 2019.raw__2019_week13__credit_balances  [[31mERROR[0m in 4.06s]
+
+20 of 46 ERROR creating python table model 2019.raw__2019_week20__patient_hospital_costs  [[31mERROR[0m in 0.69s]
+
+14 of 46 ERROR creating python table model 2019.raw__2019_week14__cafe_transactions  [[31mERROR[0m in 5.15s]
+
+18 of 46 ERROR creating python table model 2019.raw__2019_week18__anime_data ... [[31mERROR[0m in 3.92s]
+
+24 of 46 ERROR creating python table model 2019.raw__2019_week24__whatsapp_messages  [[31mERROR[0m in 1.43s]
+
+19 of 46 ERROR creating python table model 2019.raw__2019_week19__2018_tour_de_france_results  [[31mERROR[0m in 4.68s]
+
+25 of 46 ERROR creating python table model 2019.raw__2019_week25__concert_gigs . [[31mERROR[0m in 1.19s]
+
+23 of 46 ERROR creating python table model 2019.raw__2019_week23__sales_from_dave  [[31mERROR[0m in 2.92s]
+
+26 of 46 ERROR creating python table model 2019.raw__2019_week26__cocktail_ingredients  [[31mERROR[0m in 3.36s]
+
+27 of 46 ERROR creating python table model 2019.raw__2019_week27__store_sales .. [[31mERROR[0m in 3.59s]
+
+28 of 46 ERROR creating python table model 2019.raw__2019_week28__employee_productivity  [[31mERROR[0m in 3.32s]
+
+29 of 46 ERROR creating python table model 2019.raw__2019_week29__subscription_pricing  [[31mERROR[0m in 4.01s]
+
+31 of 46 ERROR creating python table model 2019.raw__2019_week31__orders_data .. [[31mERROR[0m in 4.72s]
+
+32 of 46 ERROR creating python table model 2019.raw__2019_week32__customer_purchases  [[31mERROR[0m in 4.07s]
+
+30 of 46 ERROR creating python table model 2019.raw__2019_week30__swim_club_tweets  [[31mERROR[0m in 5.22s]
+
+33 of 46 ERROR creating python table model 2019.raw__2019_week33__hr_data ...... [[31mERROR[0m in 4.42s]
+
+37 of 46 ERROR creating python table model 2019.raw__2019_week37__sales_files .. [[31mERROR[0m in 1.17s]
+
+34 of 46 ERROR creating python table model 2019.raw__2019_week34__delivery_schedule  [[31mERROR[0m in 3.63s]
+
+35 of 46 ERROR creating python table model 2019.raw__2019_week35__store_orders . [[31mERROR[0m in 5.05s]
+
+40 of 46 ERROR creating python table model 2019.raw__2019_week40__survey_data .. [[31mERROR[0m in 1.58s]
+
+39 of 46 ERROR creating python table model 2019.raw__2019_week39__website_statistics  [[31mERROR[0m in 4.62s]
+
+41 of 46 ERROR creating python table model 2019.raw__2019_week41__customer_complaints  [[31mERROR[0m in 4.04s]
+
+42 of 46 ERROR creating python table model 2019.raw__2019_week42__store_expansion  [[31mERROR[0m in 4.73s]
+
+45 of 46 ERROR creating python table model 2019.raw__2019_week45__store_sales_data  [[31mERROR[0m in 1.31s]
+
+43 of 46 ERROR creating python table model 2019.raw__2019_week43__store_appraisals  [[31mERROR[0m in 5.50s]
+
+46 of 46 ERROR creating python table model 2019.raw__2019_week46__nice_and_naughty_list  [[31mERROR[0m in 1.56s]
+
+44 of 46 ERROR creating python table model 2019.raw__2019_week44__staff_sales .. [[31mERROR[0m in 4.04s]
+
+[31mFailure in model raw__2019_week01__input (models/0__raw/2019/raw__2019_week01__input.py)[0m
+
+  Runtime Error in model raw__2019_week01__input (models/0__raw/2019/raw__2019_week01__input.py)
+  Python model failed:
+  Traceback (most recent call last):
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 281, in run_python_job
+      df = module.model(dbt, con)
+    File "/var/folders/qr/vdftrft57tqgr90fp8ryx6zm0000gn/T/tmpux78mcgq.py", line 10, in model
+      df = pl.read_csv(url)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+      return function(*args, **kwargs)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/csv/functions.py", line 558, in read_csv
+      with prepare_file_arg(
+           ~~~~~~~~~~~~~~~~^
+          source,
+          ^^^^^^^
+      ...<3 lines>...
+          storage_options=storage_options,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ) as data:
+      ^
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 230, in prepare_file_arg
+      return process_file_url(file, encoding_str)
+    File "/Users/kazuya_araki/Development/Private/dagster/dbt-duckdb-dagster/.venv/lib/python3.13/site-packages/polars/io/_utils.py", line 304, in process_file_url
+      with urlopen(path) as f:
+           ~~~~~~~^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 189, in urlopen
+      return opener.open(url, data, timeout)
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 495, in open
+      response = meth(req, response)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 604, in http_response
+      response = self.parent.error(
+          'http', request, response, code, msg, hdrs)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 527, in error
+      result = self._call_chain(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py", line 466, in _call_chain
+      result = func(*args)
+    File "/Users/kazuya_araki/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/urllib/request.py",2026-04-23 00:55:11 +0900 - dagster - DEBUG - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85109 - ENGINE_EVENT - Multiprocess executor: parent process exiting after 43.96s (pid: 85109)
+2026-04-23 00:55:11 +0900 - dagster - ERROR - dbt_2019_job - 42d5e8cc-3794-417c-972c-3a92338686b9 - 85109 - RUN_FAILURE - Execution of run for "dbt_2019_job" failed. Steps failed: ['dbt_2019_assets'].
+[32m2026-04-23 01:49:07 +0900[0m - dagster - [34mINFO[0m - KeyboardInterrupt received
+[32m2026-04-23 01:49:07 +0900[0m - dagster - [34mINFO[0m - Shutting down Dagster services...
+[32m2026-04-23 01:49:07 +0900[0m - dagster.daemon - [34mINFO[0m - Received interrupt, shutting down daemon threads...
+[32m2026-04-23 01:49:07 +0900[0m - dagster.daemon - [34mINFO[0m - Daemon threads shut down.
+[32m2026-04-23 01:49:07 +0900[0m - dagster - [34mINFO[0m - Dagster services shut down.

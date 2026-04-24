@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week23__sales_from_dave
+    description: "Preppin' Data 2019 Week 23 の入力データ（Sales from Dave.csv）"

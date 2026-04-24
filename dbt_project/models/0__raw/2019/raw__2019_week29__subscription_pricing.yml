@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week29__subscription_pricing
+    description: "Preppin' Data 2019 Week 29 の入力データ（Subscription Pricing.csv）"

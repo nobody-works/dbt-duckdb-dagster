@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week38__clinic_data
+    description: "Preppin' Data 2019 Week 38 の入力データ（Clinic Data.csv）"

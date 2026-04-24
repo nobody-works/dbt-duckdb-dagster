@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week31__orders_data
+    description: "Preppin' Data 2019 Week 31 の入力データ（Orders Data.csv）"

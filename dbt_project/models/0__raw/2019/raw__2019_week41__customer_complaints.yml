@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week41__customer_complaints
+    description: "Preppin' Data 2019 Week 41 の入力データ（Customer Complaints.csv）"

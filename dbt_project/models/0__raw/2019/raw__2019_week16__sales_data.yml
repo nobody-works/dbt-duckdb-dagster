@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week16__sales_data
+    description: "Preppin' Data 2019 Week 16 の入力データ（Sales Data.csv）"

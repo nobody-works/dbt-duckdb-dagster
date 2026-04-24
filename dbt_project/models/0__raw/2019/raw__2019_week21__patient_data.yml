@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week21__patient_data
+    description: "Preppin' Data 2019 Week 21 の入力データ（Patient Data.csv）"

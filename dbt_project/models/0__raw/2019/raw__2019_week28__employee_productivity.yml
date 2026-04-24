@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: raw__2019_week28__employee_productivity
+    description: "Preppin' Data 2019 Week 28 の入力データ（Employee Productivity.csv）"
