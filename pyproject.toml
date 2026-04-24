@@ -8,10 +8,12 @@ dependencies = [
     "dagster>=1.9",
     "dagster-dbt>=0.25",
     "dagster-webserver>=1.9",
+    "duckdb>=1.5.2",
     "polars>=1.0",
     "pyarrow>=17.0",
     "pandas>=2.0",
     "requests>=2.31",
+    "duckdb-cli>=1.5.2",
 ]
 
 [build-system]
