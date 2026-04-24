@@ -22,7 +22,7 @@ models:
         +schema: "2019"
         +tags: "2019"
       "2023":
-        +schema: "2019"
+        +schema: "2023"
         +tags: "2023"
     "1__staging":
       +materialized: view
