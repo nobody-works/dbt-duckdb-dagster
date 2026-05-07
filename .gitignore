@@ -225,3 +225,6 @@ logs/
 
 # DuckDB
 data/*.duckdb
+
+# Dagster
+.tmp_*/
